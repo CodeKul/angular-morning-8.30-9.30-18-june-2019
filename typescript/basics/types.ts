@@ -5,7 +5,7 @@ let ver: number = 10
 let fn: () => void = function () {
 
 }
-fn = () => {
+fn = () => {    
 
 }
 
