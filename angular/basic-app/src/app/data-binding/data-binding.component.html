@@ -1,0 +1,37 @@
+<div class="row mt-3">
+  <div class="col-md-12">
+    <p class="alert alert-info">{{alTx}}</p>
+    <p class="alert alert-info">{{alTx.toUpperCase()}}</p>
+    <p class="alert alert-info">Calculation is {{56*96}}</p>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <input type="{{typ}}">
+  </div>
+</div>
+<div class="row" [style.border]="brd">
+  <div class="col-md-12">
+    <input [type]="typ" [value]="btn">
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <p class="alert" 
+      [class.alert-info]="false" 
+      [attr.role]="alAttr"> 
+      This one the feature of data binding
+    </p>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <input type="button" value="Okay" (click)="myClick($event)">
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <input type="number" (keyup)="onEnter($event)">
+  </div>
+  
+</div>
