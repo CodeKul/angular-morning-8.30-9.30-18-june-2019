@@ -12,4 +12,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'codekul angular';
+
+  myProgress(prg: number) {
+    console.log(prg)
+  }
 }

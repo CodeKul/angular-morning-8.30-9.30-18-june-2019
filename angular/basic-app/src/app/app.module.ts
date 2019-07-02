@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms'
 
 import { AppComponent } from './app.component';
 import { H1DataComponent } from './h1-data/h1-data.component';
@@ -12,6 +13,7 @@ import { PricingCardComponent } from './pricing/pricing-card/pricing-card.compon
 import { FooterComponent } from './pricing/footer/footer.component';
 import { FooterItemComponent } from './pricing/footer/footer-item/footer-item.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
+import { CustomPropertiesEventsComponent } from './custom-properties-events/custom-properties-events.component';
 
 @NgModule({
   declarations: [
@@ -25,10 +27,12 @@ import { DataBindingComponent } from './data-binding/data-binding.component';
     PricingCardComponent,
     FooterComponent,
     FooterItemComponent,
-    DataBindingComponent
+    DataBindingComponent,
+    CustomPropertiesEventsComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

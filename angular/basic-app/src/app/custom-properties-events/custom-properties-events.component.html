@@ -1,0 +1,19 @@
+<div class="row mt-3">
+  <div class="col-md-12">
+    <div class="progress">
+      <div 
+        class="progress-bar" 
+        role="progressbar" 
+        [style.width]="strPrg" 
+        [attr.aria-valuenow]="defPrg" 
+        [attr.aria-valuemin]="0"
+        [attr.aria-valuemax]="100">{{strPrg}}</div>
+    </div>
+  </div>
+</div>
+<div class="row mt-3">
+  <div class="col-md-12">
+    <input type="button" value="Plus" class="btn btn-info" (click)="onOperation(1)">
+    <input type="button" value="Minus" class="btn btn-info" (click)="onOperation(2)">
+  </div>
+</div>

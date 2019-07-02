@@ -12,6 +12,7 @@ export class DataBindingComponent implements OnInit {
   btn = `Okay`
   brd = '1px solid red'
   alAttr = 'alert'
+  ipVal :string
 
   constructor() { }
 
