@@ -14,6 +14,8 @@ import { FooterComponent } from './pricing/footer/footer.component';
 import { FooterItemComponent } from './pricing/footer/footer-item/footer-item.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
 import { CustomPropertiesEventsComponent } from './custom-properties-events/custom-properties-events.component';
+import { PrgBarComponent } from './custom-properties-events/prg-bar.component';
+import { BtnBarComponent } from './custom-properties-events/btn-bar.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { CustomPropertiesEventsComponent } from './custom-properties-events/cust
     FooterComponent,
     FooterItemComponent,
     DataBindingComponent,
-    CustomPropertiesEventsComponent
+    CustomPropertiesEventsComponent,
+    PrgBarComponent,
+    BtnBarComponent
   ],
   imports: [
     BrowserModule,

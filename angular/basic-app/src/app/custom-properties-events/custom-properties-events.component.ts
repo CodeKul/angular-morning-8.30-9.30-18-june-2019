@@ -7,29 +7,12 @@ import { Component, OnInit, EventEmitter, Input, Output } from '@angular/core';
 })
 export class CustomPropertiesEventsComponent implements OnInit {
 
-  @Input()
-  defProg: number
-
-  strPrg : string
-
-  @Output()
-  onProgress: EventEmitter<number> = new EventEmitter()
+ 
+  defProg: number = 60
 
   constructor() { }
 
   ngOnInit() {
-    this.strPrg = `${this.defProg}%`
-  }
-
-  onOperation(btn: number) {
-    if (btn == 1) {
-        // plus btn
-        ++this.defProg
-    } else {
-      // minus
-      --this.defProg
-    }
-    this.strPrg = `${this.defProg}%`
-    this.onProgress.emit(this.defProg)
+  
   }
 }
