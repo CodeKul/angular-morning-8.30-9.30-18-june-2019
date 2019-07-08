@@ -16,6 +16,8 @@ import { DataBindingComponent } from './data-binding/data-binding.component';
 import { CustomPropertiesEventsComponent } from './custom-properties-events/custom-properties-events.component';
 import { PrgBarComponent } from './custom-properties-events/prg-bar.component';
 import { BtnBarComponent } from './custom-properties-events/btn-bar.component';
+import { DirectivesComponent } from './directives/directives.component';
+import { SizerDirective } from './directives/sizer.directive';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import { BtnBarComponent } from './custom-properties-events/btn-bar.component';
     DataBindingComponent,
     CustomPropertiesEventsComponent,
     PrgBarComponent,
-    BtnBarComponent
+    BtnBarComponent,
+    DirectivesComponent,
+    SizerDirective
   ],
   imports: [
     BrowserModule,
