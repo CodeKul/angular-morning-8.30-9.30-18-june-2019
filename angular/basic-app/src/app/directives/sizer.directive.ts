@@ -1,12 +1,13 @@
-import { Directive, HostBinding, HostListener } from '@angular/core';
+import { Directive, HostBinding, HostListener, Input } from '@angular/core';
 
 @Directive({
   selector: '[appSizer]'
 })
 export class SizerDirective {
 
+  @Input('appSizer')
   @HostBinding('style.width.px')
-  wd = 200
+  wd?: number
 
   constructor() { }
 

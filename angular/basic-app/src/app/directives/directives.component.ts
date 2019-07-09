@@ -8,8 +8,16 @@ import { Component, OnInit } from '@angular/core';
 export class DirectivesComponent implements OnInit {
 
   stl = {
-    border : '1px solid red'
+    border: '1px solid red'
   }
+
+  isVb = true
+  mobiles = [
+    { name: 'HTC', os: 'android' },
+    { name: 'Apple', os: 'iOS' },
+    { name: 'Motorola', os: 'android' },
+    { name: 'BB', os: 'rim' }
+  ]
   constructor() { }
 
   ngOnInit() {

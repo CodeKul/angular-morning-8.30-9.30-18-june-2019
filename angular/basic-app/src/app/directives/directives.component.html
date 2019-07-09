@@ -1,6 +1,6 @@
 <div class="row">
   <div class="col-md-12">
-    <input type="text" [ngStyle]="stl" appSizer>
+    <input type="text" [ngStyle]="stl" [appSizer]="200">
   </div>
 </div>
 <div class="row">
@@ -10,6 +10,27 @@
 </div>
 <div class="row">
   <div class="col-md-12">
-    <input type="text" appSizer>
+    <input type="text" [appSizer]="300">
+  </div>
+</div>
+<div class="row mt-3">
+  <div class="col-md-12">
+    <p class="alert alert-info" *ngIf="isVb">This codekul, angular development</p>
+    <input type="button" class="btn btn-info" value="Okay" (click)="isVb = !isVb">
+  </div>
+</div>
+<div class="col-md-12">
+  <ng-template [ngIf]="isVb">
+    <p class="alert alert-info">This codekul, angular development</p>
+  </ng-template>
+  <input type="button" class="btn btn-info" value="Okay" (click)="isVb = !isVb">
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <ul>
+      <li *ngFor="let abcslddkdlkasdfnfklsadfjl of mobiles">
+        {{abcslddkdlkasdfnfklsadfjl.name}} => {{abcslddkdlkasdfnfklsadfjl.os}}
+      </li> 
+    </ul>
   </div>
 </div>
