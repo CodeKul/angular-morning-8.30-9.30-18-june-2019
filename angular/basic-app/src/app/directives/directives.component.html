@@ -19,18 +19,32 @@
     <input type="button" class="btn btn-info" value="Okay" (click)="isVb = !isVb">
   </div>
 </div>
-<div class="col-md-12">
-  <ng-template [ngIf]="isVb">
-    <p class="alert alert-info">This codekul, angular development</p>
-  </ng-template>
-  <input type="button" class="btn btn-info" value="Okay" (click)="isVb = !isVb">
+<div class="row">
+  <div class="col-md-12">
+    <ng-template [ngIf]="isVb">
+      <p class="alert alert-info">This codekul, angular development (in side ng-template)</p>
+    </ng-template>
+    <input type="button" class="btn btn-info" value="Okay" (click)="isVb = !isVb">
+  </div>
 </div>
 <div class="row">
   <div class="col-md-12">
     <ul>
       <li *ngFor="let abcslddkdlkasdfnfklsadfjl of mobiles">
         {{abcslddkdlkasdfnfklsadfjl.name}} => {{abcslddkdlkasdfnfklsadfjl.os}}
-      </li> 
+      </li>
     </ul>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <ng-container *ngIf="true">
+      <p class="alert alert-info">This codekul, angular development (in side ng-container)</p>
+    </ng-container>
+  </div>
+</div>
+<div class="row" *appStrDir="false">
+  <div class="col-md-12">
+    <p class="alert alert-info">This codekul, angular development (unless directive)</p>
   </div>
 </div>

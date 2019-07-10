@@ -18,6 +18,7 @@ import { PrgBarComponent } from './custom-properties-events/prg-bar.component';
 import { BtnBarComponent } from './custom-properties-events/btn-bar.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { SizerDirective } from './directives/sizer.directive';
+import { StrDirDirective } from './directives/str-dir.directive';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { SizerDirective } from './directives/sizer.directive';
     PrgBarComponent,
     BtnBarComponent,
     DirectivesComponent,
-    SizerDirective
+    SizerDirective,
+    StrDirDirective
   ],
   imports: [
     BrowserModule,
