@@ -12,8 +12,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'codekul angular';
+  isSh = false
+  cnt = 0
 
-  myProgress(prg: number) {
-    console.log(prg)
+  myProgress() {
+    this.cnt++
   }
 }

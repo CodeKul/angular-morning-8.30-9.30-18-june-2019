@@ -1,3 +1,4 @@
+import { MyServiceService } from './services/my-service.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms'
@@ -19,6 +20,8 @@ import { BtnBarComponent } from './custom-properties-events/btn-bar.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { SizerDirective } from './directives/sizer.directive';
 import { StrDirDirective } from './directives/str-dir.directive';
+import { LifecycleComponent } from './lifecycle/lifecycle.component';
+import { ServicesComponent } from './services/services.component';
 
 @NgModule({
   declarations: [
@@ -38,13 +41,15 @@ import { StrDirDirective } from './directives/str-dir.directive';
     BtnBarComponent,
     DirectivesComponent,
     SizerDirective,
-    StrDirDirective
+    StrDirDirective,
+    LifecycleComponent,
+    ServicesComponent
   ],
   imports: [
     BrowserModule,
     FormsModule
   ],
-  providers: [],
+  providers: [MyServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
