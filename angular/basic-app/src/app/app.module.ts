@@ -1,3 +1,5 @@
+import { IotServiceService } from './services/iot-service.service';
+import { DataServiceService } from './services/data-service.service';
 import { MyServiceService } from './services/my-service.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -22,6 +24,8 @@ import { SizerDirective } from './directives/sizer.directive';
 import { StrDirDirective } from './directives/str-dir.directive';
 import { LifecycleComponent } from './lifecycle/lifecycle.component';
 import { ServicesComponent } from './services/services.component';
+import { Comp1Component } from './services/comp1.component';
+import { Comp2Component } from './services/comp2.component';
 
 @NgModule({
   declarations: [
@@ -43,13 +47,15 @@ import { ServicesComponent } from './services/services.component';
     SizerDirective,
     StrDirDirective,
     LifecycleComponent,
-    ServicesComponent
+    ServicesComponent,
+    Comp1Component,
+    Comp2Component
   ],
   imports: [
     BrowserModule,
     FormsModule
   ],
-  providers: [MyServiceService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
