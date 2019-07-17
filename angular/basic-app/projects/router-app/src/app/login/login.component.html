@@ -1,0 +1,12 @@
+<div class="row mt-5">
+  <div class="col-md-12">
+    <input type="text" placeholder="User Name" #usNm>
+    <input type="text" placeholder="Password" #pass>
+    <input type="button" class="btn btn-primary" value="Login" (click)="onLogin(usNm.value, pass.value)">
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <a [routerLink]="['fp']">Forget Password.</a>
+    </div>
+  </div>
+</div>
