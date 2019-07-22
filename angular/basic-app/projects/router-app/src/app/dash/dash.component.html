@@ -1,3 +1,18 @@
-<p>
-  dash works!
-</p>
+<div class="row">
+  <div class="col-md-12">
+    <h1 class="text-muted">Hello user - {{usNmFromRoute}}</h1>
+    <h1 class="text-muted"> Title - {{ttl}}</h1>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-3">
+    <ul>
+      <li *ngFor="let country of countries">
+        <a [routerLink]="['country']" [queryParams]="{ cnt : country?.name }">{{country?.name}}</a>
+      </li>
+    </ul>
+  </div>
+  <div class="col-md-9">
+    <router-outlet></router-outlet>
+  </div>
+</div>

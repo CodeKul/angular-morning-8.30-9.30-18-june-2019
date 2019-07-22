@@ -9,13 +9,18 @@ import { Router } from '@angular/router';
 export class LoginComponent implements OnInit {
 
   constructor(
-    private router : Router
+    private router: Router
   ) { }
 
   ngOnInit() {
   }
 
   onLogin(usNm, pass) {
-    this.router.navigate(['dash'])
+    this.router.navigate(['dash', usNm], {
+      queryParams: {
+        ttl: 'lkVaklc',
+        adpfldkaddlvdkls: ' lkDLK'
+      }
+    })
   }
 }

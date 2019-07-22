@@ -1,15 +1,15 @@
-import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { Country } from '../dash.component';
 
 @Component({
-  selector: 'app-dash',
-  templateUrl: './dash.component.html',
-  styleUrls: ['./dash.component.css']
+  selector: 'app-info',
+  templateUrl: './info.component.html',
+  styleUrls: ['./info.component.css']
 })
-export class DashComponent implements OnInit {
+export class InfoComponent implements OnInit {
 
-  usNmFromRoute: string
-  ttl: string
+  imgSrc: string
 
   countries: Array<Country> = [
     { name: 'India', flag: 'https://images-na.ssl-images-amazon.com/images/I/61hy5zBeYQL._SX425_.jpg' },
@@ -24,13 +24,11 @@ export class DashComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.actRt.params.subscribe(prms => this.usNmFromRoute = prms['usNm'])
-
-    this.actRt.queryParams.subscribe(prms => this.ttl = prms['ttl'])
+    this.actRt.queryParams.subscribe(
+      prm => {
+        this.imgSrc = this.countries[this.countries.findIndex(el => el.name == prm['cnt'])].flag
+        console.log(this.imgSrc)
+      }
+    )
   }
-}
-
-export interface Country {
-  name: string
-  flag: string
 }
