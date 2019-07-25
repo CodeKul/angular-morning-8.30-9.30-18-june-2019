@@ -1,3 +1,4 @@
+import { MyGuard } from './my.guard';
 import { FpComponent } from './fp/fp.component';
 import { DashComponent } from './dash/dash.component';
 import { LoginComponent } from './login/login.component';
@@ -12,7 +13,7 @@ const dashChildren: Routes = [
 
 const routes: Routes = [
   { path: '', component: LoginComponent },
-  { path: 'dash/:usNm', component: DashComponent, children : dashChildren },
+  { path: 'dash/:usNm', component: DashComponent, children: dashChildren, canActivate: [MyGuard] },
   { path: 'fp/:who', component: FpComponent },
   { path: '**', redirectTo: '' }
 ];
